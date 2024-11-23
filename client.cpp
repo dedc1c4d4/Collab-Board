@@ -14,7 +14,7 @@ void receiveUpdates(sf::Image& canvas, sf::Texture& texture) {
     while (true) {
         sf::Packet packet;
         if (socket.receive(packet) == sf::Socket::Done) {
-            // Extract drawing data
+            // Extract drawing 
             int x1, y1, x2, y2;
             if (packet >> x1 >> y1 >> x2 >> y2) {
                 sf::RenderTexture renderTexture;
